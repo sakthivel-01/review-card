@@ -1,0 +1,144 @@
+/* Variables */
+:root {
+    --white: hsl(0, 0%, 100%);
+    --light-grey: hsl(217, 12%, 63%);
+    --medium-grey: hsl(216, 12%, 54%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+
+    --accent-dark-blue: hsl(213, 19%, 22%);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+/* General classes */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--very-dark-blue);
+
+}
+
+p {
+    font-size: 15px;
+    color: var(--light-grey);
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+/* Utility classes */
+.wrapper {
+    font-family: 'Overpass', sans-serif;
+    width: 25rem;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    background-color: var(--dark-blue);
+}
+
+.ask-rating {
+    padding: 2rem;
+}
+
+.ask-rating img {
+    background-color: var(--accent-dark-blue);
+    padding: 1rem;
+    border-radius: 100%;
+}
+
+h1 {
+    font-size: 1.7rem;
+    padding-block: 1rem 0.5rem;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.rate {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2.5rem;
+    padding-inline: 1rem;
+    align-items: center;
+}
+
+.number {
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+    color: var(--light-grey);
+}
+
+.number:hover {
+    color: white;
+}
+
+.number::after {
+    content: '';
+    background-color: var(--accent-dark-blue);
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transform: translate(-40%, -29%);
+    transition: background-color 0.3s;
+}
+
+.number:hover::after {
+    background-color: hsl(25, 97%, 53%);
+}
+
+.number:focus::after {
+    background-color: hsl(217, 12%, 63%);
+}
+
+.submit-btn {
+    background-color: hsl(25, 97%, 53%);
+    color: white;
+    padding: 0.7rem 1rem;
+    border-radius: 100vmax;
+    border: none;
+    width: 100%;
+    margin-top: 3rem;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: white;
+    color: hsl(25, 97%, 53%);
+}
+
+.thank {
+    padding: 1rem 2rem;
+    color: hsl(0, 0%, 100%);
+    font-size: 29px;
+    font-weight: 700;
+}
+
+.result-rating {
+    text-align: center;
+    padding: 1rem;
+    width: 340px;
+}
+
+.result-image {
+    padding: 1rem;
+}
+
+.stars {
+    width: 190px;
+    padding: 0.3rem;
+    margin-left: 70px;
+
+    border-radius: 50vmax;
+    background-color: var(--accent-dark-blue);
+    color: hsl(25, 97%, 53%);
+}
